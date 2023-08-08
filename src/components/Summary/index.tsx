@@ -8,14 +8,14 @@ export function Summary(){
         <Container>
             <div>
                 <header>
-                    <p>Entradas</p>
+                    <p>Incoming</p>
                     <img src={incomeImg} alt="Entradas" />
                 </header>
                 <strong>R$7000,00</strong>
             </div>
             <div>
                 <header>
-                    <p>Saidas</p>
+                    <p>Spending</p>
                     <img src={outcomeImg} alt="Saidas" />
                 </header>
                 <strong>- R$8000,00</strong>

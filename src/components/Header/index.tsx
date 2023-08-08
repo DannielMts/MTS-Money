@@ -12,7 +12,7 @@ export function Header({onOpenNewTransitionModal}: HeaderProps){
             <Content>
                 <img src={logoImg} alt="MTS Money" width='200px'/>
                 <button type="button" onClick={onOpenNewTransitionModal}>
-                    Nova Transação
+                    New Transaction
                 </button>
             </Content>
         </Container>
