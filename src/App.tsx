@@ -5,26 +5,29 @@ import { GlobalStyle } from "./styles/global";
 import { useState } from "react";
 import { NewTransactionModal } from "./components/NewTransactionModal";
 
-ReactModal.setAppElement('#root');
+ReactModal.setAppElement("#root");
 
 export function App() {
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =
+    useState(false);
 
-  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
-
-  function handleOpenNewTransactionModal(){
-      setIsNewTransactionModalOpen(true)
+  function handleOpenNewTransactionModal() {
+    setIsNewTransactionModalOpen(true);
   }
 
-  function handleCloseNewTransactionModal(){
-      setIsNewTransactionModalOpen(false)
+  function handleCloseNewTransactionModal() {
+    setIsNewTransactionModalOpen(false);
   }
 
   return (
     <>
       <GlobalStyle />
-      <Header onOpenNewTransitionModal={handleOpenNewTransactionModal}/>
+      <Header onOpenNewTransitionModal={handleOpenNewTransactionModal} />
       <Dashboard />
-      <NewTransactionModal isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseNewTransactionModal}/>
+      <NewTransactionModal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      />
     </>
   );
 }
