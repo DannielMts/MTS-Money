@@ -37,7 +37,7 @@ createServer({
         {
           id: 4,
           title: "Nova Era",
-          type: "deposit",
+          type: "withdraw",
           amount: 1300,
           category: "Mercado",
           createdAt: new Date("2023-07-25 08:00:00"),
